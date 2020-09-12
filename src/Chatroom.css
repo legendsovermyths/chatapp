@@ -1,0 +1,15 @@
+.chatroom {
+  display: flex;
+  padding-top: 1.5vh;
+  padding-bottom: 1.5vh;
+  cursor: pointer;
+}
+.chatroom__avatar {
+  padding: 0 2vh 0 2vh;
+}
+.chatroom__details {
+  color: #eeeeee;
+}
+.chatroom:hover {
+  background-color: #393e46;
+}

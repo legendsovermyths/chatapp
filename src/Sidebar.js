@@ -5,6 +5,7 @@ import ChatIcon from "@material-ui/icons/Chat";
 import DonutLargeIcon from "@material-ui/icons/DonutLarge";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import SearchIcon from "@material-ui/icons/Search";
+import Chatroom from "./Chatroom";
 
 function Sidebar() {
   return (
@@ -32,6 +33,9 @@ function Sidebar() {
       </div>
       <div>
         <h1>Chatrooms</h1>
+      </div>
+      <div className='sidebar__chatrooms'>
+        <Chatroom />
       </div>
     </div>
   );
