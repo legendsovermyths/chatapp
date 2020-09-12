@@ -2,4 +2,13 @@
   display: grid;
   place-items: center;
   height: 100vh;
+  background-color: #393e46;
+}
+.app__body {
+  display: flex;
+  background-color: #222831;
+  margin-top: -50px;
+  height: 80vh;
+  width: 80vw;
+  box-shadow: -1px 4px 20px -6px rgba(0, 0, 0, 0.75);
 }
