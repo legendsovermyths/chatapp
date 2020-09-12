@@ -30,6 +30,9 @@ function Sidebar() {
           className='sidebar__search-text'
         />
       </div>
+      <div>
+        <h1>Chatrooms</h1>
+      </div>
     </div>
   );
 }

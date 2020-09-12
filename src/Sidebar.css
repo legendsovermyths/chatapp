@@ -28,11 +28,16 @@
 }
 .sidebar__search-text {
   background-color: #393e46;
-  width: 90%;
+  width: 20vw;
   border: none;
   color: #eeeeee;
 }
 
 .sidebar__search-text:focus {
   outline: none;
+}
+h1 {
+  font-family: "Kufam", cursive;
+  color: #eeeeee;
+  margin-left: 15;
 }
