@@ -35,7 +35,11 @@ function Sidebar() {
         <h1>Chatrooms</h1>
       </div>
       <div className='sidebar__chatrooms'>
-        <Chatroom />
+        <Chatroom roomName='Dance Room' lastMessage='Nice Room!!' />
+        <Chatroom
+          roomName='CSE department'
+          lastMessage='Welcome to the department!'
+        />
       </div>
     </div>
   );
