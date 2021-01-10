@@ -3,3 +3,38 @@
   flex-direction: column;
   flex: 0.65;
 }
+.chat__header {
+  border-left: solid 1px;
+  border-color: 222831;
+  background-color: #393e46;
+  display: flex;
+  justify-content: space-between;
+}
+.chat__header-avatar {
+  padding: 1vw;
+  font-size: 32px;
+}
+.chat__header-right {
+  display: flex;
+}
+.chat__header-info {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-top: 1vw;
+  font-family: "Kufam", cursive;
+  color: #eeeeee;
+}
+.chat__header-info p {
+  margin-left: 0px;
+}
+.chat__header-left {
+  color: #eeeeee;
+}
+.chat__header-left-option {
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+  padding-right: 1vw !important;
+  padding-left: 1vw !important;
+  color: #eeeeee;
+}

@@ -1,13 +1,19 @@
 import React from "react";
 import "./Sidebar.css";
 import Avatar from "@material-ui/core/Avatar";
-import ChatIcon from "@material-ui/icons/Chat";
 import DonutLargeIcon from "@material-ui/icons/DonutLarge";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import SearchIcon from "@material-ui/icons/Search";
+import AddIcon from "@material-ui/icons/Add";
 import Chatroom from "./Chatroom";
 
 function Sidebar() {
+  const addNewChat = () => {
+    const name = prompt("Type the name of the room");
+    if (name) {
+    }
+  };
+
   return (
     <div className='sidebar'>
       <div className='sidebar__header'>
@@ -18,7 +24,9 @@ function Sidebar() {
           />
         </div>
         <div className='sidebar__header-options'>
-          <ChatIcon className='sidebar__header-option'></ChatIcon>
+          <AddIcon
+            onClick={addNewChat}
+            className='sidebar__header-option'></AddIcon>
           <DonutLargeIcon className='sidebar__header-option'></DonutLargeIcon>
           <MoreVertIcon className='sidebar__header-option'></MoreVertIcon>
         </div>
