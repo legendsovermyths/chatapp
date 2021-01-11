@@ -40,3 +40,13 @@
   padding-left: 1vw !important;
   color: #eeeeee;
 }
+.chat__body {
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.chat__input-bar {
+  position: relative;
+  flex: 0;
+}

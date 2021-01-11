@@ -15,10 +15,10 @@
   border-bottom-right-radius: 10px;
 }
 .Chat__message-reciever {
-  display: inline-block;
+  width: fit-content;
   color: #eeeeee;
   margin-top: 10px;
-  margin-left: 89%;
+  margin-left: auto;
   padding: 10px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;

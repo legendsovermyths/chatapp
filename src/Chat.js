@@ -4,6 +4,8 @@ import SearchSharpIcon from "@material-ui/icons/SearchSharp";
 import AttachFileIcon from "@material-ui/icons/AttachFile";
 import ListIcon from "@material-ui/icons/List";
 import Avatar from "@material-ui/core/Avatar";
+import EmojiEmotionsOutlinedIcon from "@material-ui/icons/EmojiEmotionsOutlined";
+import MicNoneOutlinedIcon from "@material-ui/icons/MicNoneOutlined";
 import { makeStyles } from "@material-ui/core/styles";
 import "./Chat.css";
 
@@ -47,12 +49,21 @@ function Chat() {
         </div>
       </div>
       <div className='chat__body'>
-        <div className='chat__messages'></div>
-        <ChatMessage></ChatMessage>
-        <ChatMessage></ChatMessage>
-        <ChatMessage></ChatMessage>
-        <ChatMessage></ChatMessage>
-        <ChatMessage></ChatMessage>
+        <div className='chat__messages'>
+          <ChatMessage></ChatMessage>
+          <ChatMessage></ChatMessage>
+          <ChatMessage></ChatMessage>
+          <ChatMessage></ChatMessage>
+          <ChatMessage></ChatMessage>
+        </div>
+        <div className='chat__input-bar'>
+          <EmojiEmotionsOutlinedIcon />
+          <form action='submit'>
+            <input type='text' />
+            <button type='submit'></button>
+          </form>
+          <MicNoneOutlinedIcon />
+        </div>
       </div>
     </div>
   );
