@@ -31,23 +31,25 @@ function Sidebar() {
           <MoreVertIcon className='sidebar__header-option'></MoreVertIcon>
         </div>
       </div>
-      <div className='sidebar__search'>
-        <SearchIcon className='sidebar__search-icon'></SearchIcon>
-        <input
-          type='text'
-          placeholder='Seach'
-          className='sidebar__search-text'
-        />
-      </div>
-      <div>
-        <h1>Chatrooms</h1>
-      </div>
-      <div className='sidebar__chatrooms'>
-        <Chatroom roomName='Dance Room' lastMessage='Nice Room!!' />
-        <Chatroom
-          roomName='CSE department'
-          lastMessage='Welcome to the department!'
-        />
+      <div className='sidebar__body'>
+        <div className='sidebar__search'>
+          <SearchIcon className='sidebar__search-icon'></SearchIcon>
+          <input
+            type='text'
+            placeholder='Seach'
+            className='sidebar__search-text'
+          />
+        </div>
+        <div>
+          <h1>Chatrooms</h1>
+        </div>
+        <div className='sidebar__chatrooms'>
+          <Chatroom roomName='Dance Room' lastMessage='Nice Room!!' />
+          <Chatroom
+            roomName='CSE department'
+            lastMessage='Welcome to the department!'
+          />
+        </div>
       </div>
     </div>
   );

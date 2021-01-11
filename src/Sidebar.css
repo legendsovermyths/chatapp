@@ -24,12 +24,17 @@
   background-color: #495464;
   cursor: pointer;
 }
+.sidebar__body {
+  height: 100%;
+  border-right: #393e46 solid 1px;
+}
 .sidebar__search {
   display: flex;
   background-color: #393e46;
   margin-top: 3vh;
   margin-bottom: 3vh;
-  margin-left: 15;
+  margin-right: 15px;
+  margin-left: 15px;
   border-radius: 20px;
 }
 
@@ -52,6 +57,5 @@ h1 {
   margin-left: 15;
 }
 .sidebar__chatrooms {
-  height: 100%;
   background-color: #222831;
 }

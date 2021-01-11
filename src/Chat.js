@@ -25,13 +25,14 @@ const useStyles = makeStyles((theme) => ({
 
 function Chat() {
   const classes = useStyles();
-
+  var avatar = Math.floor(Math.random() * 100);
+  let avatar_url = `https://avatars.dicebear.com/api/avataaars/${avatar}.svg`;
   return (
     <div className='chat'>
       <div className='chat__header'>
         <div className='chat__header-right'>
           <div className='chat__header-avatar'>
-            <Avatar className={classes.large} ser='' alt='A'></Avatar>
+            <Avatar className={classes.large} src={avatar_url} alt='A'></Avatar>
           </div>
           <div className='chat__header-info'>
             <h2>Dance Room</h2>
@@ -43,6 +44,10 @@ function Chat() {
           <SearchSharpIcon className='chat__header-left-option'></SearchSharpIcon>
           <AttachFileIcon className='chat__header-left-option'></AttachFileIcon>
         </div>
+      </div>
+      <div className='chat__body'>
+        <div className='chat__messages'></div>
+        <p>This is a text message</p>
       </div>
     </div>
   );
