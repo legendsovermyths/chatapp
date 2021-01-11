@@ -1,0 +1,28 @@
+.ChatMessage__sender p {
+  color: #eeeeee;
+  padding-left: 10px;
+  opacity: 0.4;
+  margin-top: 10px;
+}
+.ChatMessage__message-sender {
+  background-color: #d65a31;
+  color: #eeeeee;
+  display: inline-block;
+  margin-left: 10px;
+  padding: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.Chat__message-reciever {
+  display: inline-block;
+  color: #eeeeee;
+  margin-top: 10px;
+  margin-left: 89%;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 0px;
+  background-color: rgb(113, 125, 138);
+}

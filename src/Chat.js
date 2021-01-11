@@ -1,10 +1,11 @@
 import React from "react";
-import "./Chat.css";
+import ChatMessage from "./ChatMessage";
 import SearchSharpIcon from "@material-ui/icons/SearchSharp";
 import AttachFileIcon from "@material-ui/icons/AttachFile";
 import ListIcon from "@material-ui/icons/List";
 import Avatar from "@material-ui/core/Avatar";
 import { makeStyles } from "@material-ui/core/styles";
+import "./Chat.css";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -47,7 +48,11 @@ function Chat() {
       </div>
       <div className='chat__body'>
         <div className='chat__messages'></div>
-        <p>This is a text message</p>
+        <ChatMessage></ChatMessage>
+        <ChatMessage></ChatMessage>
+        <ChatMessage></ChatMessage>
+        <ChatMessage></ChatMessage>
+        <ChatMessage></ChatMessage>
       </div>
     </div>
   );
