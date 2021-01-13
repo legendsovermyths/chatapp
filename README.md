@@ -1,1 +1,2 @@
-This app is basic chatting web app using watsapp like design in dark mode, it's simple and elegant. You can create rooms to chat with your friends. It's using firebase so messages are instantly delivered.
+This app is basic chatting web app using watsapp like design in dark mode, it's simple and elegant. You can create rooms t0 chat with your friends. It's using firebase so messages are instantly delivered. it's made using react. It's using hooks and context API for state management. feel free to try it yourself on the url given below:
+If you think you can make it better then feel free to contribute:)
