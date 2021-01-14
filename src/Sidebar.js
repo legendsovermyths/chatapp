@@ -11,7 +11,7 @@ import db from "./firebase";
 function Sidebar() {
   const [rooms, setRooms] = useState([]);
   useEffect(() => {
-    db.collection("rooms").onSnapshot((snapshot) =>
+    const unsubscribe = db.collection("rooms").onSnapshot((snapshot) =>
       setRooms(
         snapshot.docs.map((doc) => ({
           id: doc.id,
@@ -19,10 +19,16 @@ function Sidebar() {
         }))
       )
     );
+    return () => {
+      unsubscribe();
+    };
   }, []);
   const addNewChat = () => {
     const name = prompt("Type the name of the room");
     if (name) {
+      db.collection("rooms").add({
+        name: name,
+      });
     }
   };
 
