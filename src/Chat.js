@@ -30,13 +30,16 @@ function Chat() {
   const [input, setInput] = useState("");
   const [avatar_url, setAvatar_url] = useState("");
   const classes = useStyles();
+
   useEffect(() => {
     var avatar = Math.floor(Math.random() * 100);
     setAvatar_url(`https://avatars.dicebear.com/api/avataaars/${avatar}.svg`);
   }, []);
+
   const sendMessage = (e) => {
     e.preventDefault();
     console.log("u typed", input);
+    setInput("");
   };
 
   return (

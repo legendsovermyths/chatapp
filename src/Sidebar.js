@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Sidebar.css";
 import Avatar from "@material-ui/core/Avatar";
 import DonutLargeIcon from "@material-ui/icons/DonutLarge";
@@ -6,8 +6,20 @@ import MoreVertIcon from "@material-ui/icons/MoreVert";
 import SearchIcon from "@material-ui/icons/Search";
 import AddIcon from "@material-ui/icons/Add";
 import Chatroom from "./Chatroom";
+import db from "./firebase";
 
 function Sidebar() {
+  const [rooms, setRooms] = useState([]);
+  useEffect(() => {
+    db.collection("rooms").onSnapshot((snapshot) =>
+      setRooms(
+        snapshot.docs.map((doc) => ({
+          id: doc.id,
+          data: doc.data(),
+        }))
+      )
+    );
+  }, []);
   const addNewChat = () => {
     const name = prompt("Type the name of the room");
     if (name) {
@@ -44,11 +56,13 @@ function Sidebar() {
           <h1>Chatrooms</h1>
         </div>
         <div className='sidebar__chatrooms'>
-          <Chatroom roomName='Dance Room' lastMessage='Nice Room!!' />
-          <Chatroom
-            roomName='CSE department'
-            lastMessage='Welcome to the department!'
-          />
+          {rooms.map((room) => (
+            <Chatroom
+              id={room.id}
+              key={room.id}
+              roomName={room.data.name}
+              lastMessage='Fuck Yes!'></Chatroom>
+          ))}
         </div>
       </div>
     </div>
