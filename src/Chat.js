@@ -7,7 +7,9 @@ import Avatar from "@material-ui/core/Avatar";
 import EmojiEmotionsOutlinedIcon from "@material-ui/icons/EmojiEmotionsOutlined";
 import MicNoneOutlinedIcon from "@material-ui/icons/MicNoneOutlined";
 import { makeStyles } from "@material-ui/core/styles";
+import { useParams } from "react-router-dom";
 import "./Chat.css";
+import db from "./firebase";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -29,12 +31,18 @@ const useStyles = makeStyles((theme) => ({
 function Chat() {
   const [input, setInput] = useState("");
   const [avatar_url, setAvatar_url] = useState("");
+  const [roomName, setRoomName] = useState("");
+  const { roomId } = useParams();
   const classes = useStyles();
 
   useEffect(() => {
-    var avatar = Math.floor(Math.random() * 100);
-    setAvatar_url(`https://avatars.dicebear.com/api/avataaars/${avatar}.svg`);
-  }, []);
+    if (roomId) {
+      db.collection("rooms")
+        .doc(roomId)
+        .onSnapshot((snapshot) => setRoomName(snapshot.data().name));
+      setAvatar_url(`https://avatars.dicebear.com/api/avataaars/${roomId}.svg`);
+    }
+  }, [roomId]);
 
   const sendMessage = (e) => {
     e.preventDefault();
@@ -50,7 +58,7 @@ function Chat() {
             <Avatar className={classes.large} src={avatar_url} alt='A'></Avatar>
           </div>
           <div className='chat__header-info'>
-            <h2>Dance Room</h2>
+            <h2>{roomName}</h2>
             <p>last message on 11:30pm</p>
           </div>
         </div>
