@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Avatar from "@material-ui/core/Avatar";
 import "./Chatroom.css";
 import { Link } from "react-router-dom";
+
 function Chatroom({ roomName, lastMessage, id }) {
-  var avatar = Math.floor(Math.random() * 100);
-  let avatar_url = `https://avatars.dicebear.com/api/avataaars/${avatar}.svg`;
+  const [avatar_url, setAvatar_url] = useState("");
+
+  useEffect(() => {
+    if (id) {
+      setAvatar_url(`https://avatars.dicebear.com/api/avataaars/${id}.svg`);
+    }
+  }, [id]);
+
   return (
     <Link style={{ textDecoration: "none" }} to={`/rooms/${id}`}>
       <div className='chatroom'>

@@ -6,10 +6,12 @@ import MoreVertIcon from "@material-ui/icons/MoreVert";
 import SearchIcon from "@material-ui/icons/Search";
 import AddIcon from "@material-ui/icons/Add";
 import Chatroom from "./Chatroom";
+
 import db from "./firebase";
 
 function Sidebar() {
   const [rooms, setRooms] = useState([]);
+
   useEffect(() => {
     const unsubscribe = db.collection("rooms").onSnapshot((snapshot) =>
       setRooms(
